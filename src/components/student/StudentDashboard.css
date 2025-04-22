@@ -1,0 +1,90 @@
+/* Dashboard Container */
+.dashboard {
+  width: 100%;
+  background: linear-gradient(to right, #121212, #1e1e1e); /* Dark gradient background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+/* Header Layout */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background-color: #1c1c1c; /* Dark header background */
+  border-radius: 8px;
+}
+
+/* Logo/Heading */
+.student-dashboard {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff; /* Light text color */
+}
+
+.boards {
+  color: #007bff; /* Light blue for accent */
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-link1,
+.nav-link2 {
+  font-size: 1.1rem;
+  color: #fff; /* Light color for the links */
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link1:hover,
+.nav-link2:hover {
+  background-color: #007bff; /* Highlight on hover */
+  color: #fff; /* Maintain white text color */
+}
+
+/* Logout Button */
+.btnstudentlogout {
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  background: transparent;
+  color: #007bff; /* Blue text color for the button */
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnstudentlogout:hover {
+  background-color: #007bff; /* Blue background on hover */
+  color: #fff; /* White text color on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

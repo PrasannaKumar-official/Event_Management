@@ -1,0 +1,69 @@
+body {
+  overflow-x: hidden;
+}
+/* Reset default spacing */
+
+/* Ensure body takes full width and height */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111010;
+}
+
+
+/* body {
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  color: #0044cc;
+  margin: 0;
+  padding: 0;
+} */
+
+/* 
+.course-selection {
+  margin: 15px 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.course-checkbox {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.course-checkbox input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.btn.reject {
+  background-color: #dc3545;
+  margin-left: 10px;
+}
+
+.btn.reject:hover {
+  background-color: #c82333;
+}
+
+.status-message.approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-message.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-message.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.uploads-dir {
+  display: none;
+} */

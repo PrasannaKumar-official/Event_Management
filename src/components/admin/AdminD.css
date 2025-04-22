@@ -1,0 +1,102 @@
+.admin-dashboard-adminD {
+  margin-left: 250px; /* match sidebar width */
+  padding: 30px;
+  background-color: #121212; /* Dark background */
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: #e0f7ff;
+  overflow-y: auto;
+}
+
+.admin-dashboard-adminD::-webkit-scrollbar {
+  width: 8px;
+}
+.admin-dashboard-adminD::-webkit-scrollbar-thumb {
+  background-color: #00bfff;
+  border-radius: 10px;
+}
+.admin-dashboard-adminD::-webkit-scrollbar-track {
+  background-color: #1e1e1e;
+}
+
+.DASHBOARD-ADMIN {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #00bfff;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #00bfff;
+  padding-bottom: 10px;
+}
+
+.dashboard-stats-adminD {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.stat-box-adminD {
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 15px rgba(0, 191, 255, 0.1); */
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  width: calc(33% - 20px);
+  min-width: 260px;
+  transition: all 0.3s ease;
+}
+
+.stat-box-adminD:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 191, 255, 0.2);
+}
+
+.dashboard-section-adminD {
+  background-color: #1a1a1a;
+  padding: 25px 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.05);
+}
+
+.dashboard-section-adminD h3 {
+  font-size: 22px;
+  color: #00bfff;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid #00bfff;
+  padding-bottom: 10px;
+}
+
+.dashboard-section-adminD ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-section-adminD li {
+  background-color: #2a2a2a;
+  color: #e0f7ff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.dashboard-section-adminD li:hover {
+  background-color: #333;
+}
+
+.dashboard-section-adminD p {
+  color: #bbb;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+}

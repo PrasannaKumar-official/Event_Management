@@ -1,0 +1,172 @@
+/* Older Simple Dark Theme for Course Registration View */
+.adminexemption {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
+}
+
+/* Table Container */
+.table-container-excemption-request-view {
+  width: 90%;
+  margin-left: 270px;
+  background: #191919;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+  max-width: 1200px;
+  position: relative;
+}
+
+/* Title Styling */
+.exemption-request {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #03a9f4;
+  margin-bottom: 20px;
+}
+
+/* Status Message Styles */
+.status-message {
+  text-align: center;
+  padding: 12px 16px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.status-message.success {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.status-message.error {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+/* Filter Input Styles */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filter-input {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #131212;
+  color: #e0e0e0;
+  font-size: 16px;
+  box-shadow: inset 0 0 0 1px #555555;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-input:focus,
+.filter-input:hover {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #777777;
+  background-color: #444444;
+}
+
+.filter-input::placeholder {
+  color: #aaaaaa;
+}
+
+/* Table Styles */
+.excemption-request-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  color: #e0e0e0;
+  margin-top: 20px;
+}
+
+.excemption-request-table th,
+.excemption-request-table td {
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid #444444;
+}
+
+.excemption-request-table th {
+  background-color: #191919;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.excemption-request-table tr:nth-child(even) {
+  background-color: #353535;
+}
+
+.excemption-request-table tr:hover {
+  background-color: #03a9f4;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Styles */
+.btnapprove {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btnapprove:hover {
+  background-color: #1e8449;
+}
+
+.btn.reject {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn.reject:hover {
+  background-color: #c0392b;
+}
+
+/* Rejection Input Styles */
+.rejection-input {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  background: #444;
+  color: #e0e0e0;
+  box-shadow: inset 0 0 0 1px #555;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.rejection-input:focus {
+  background-color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-input {
+    width: 80%;
+  }
+
+  .table-container-excemption-request-view {
+    margin: 90px 15px 20px;
+  }
+}

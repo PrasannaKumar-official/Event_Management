@@ -1,0 +1,103 @@
+.sidebar {
+  background-color: #0d0d0d; /* Darker black for better contrast */
+  color: #00bfff; /* Light blue for primary text/icons */
+  height: 100vh;
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.Admin-Dashboard {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #00bfff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.Admin-Dashboard .board {
+  color: white; /* contrast in logo */
+}
+
+.nav-menu-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-menu-admin a {
+  color: #e0f7ff; /* lighter blue for links */
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  font-size: 15px;
+  background-color: transparent;
+  display: block;
+}
+
+.nav-menu-admin a:hover {
+  background-color: rgba(0, 191, 255, 0.1);
+  color: #00bfff;
+  transform: translateX(8px);
+}
+
+.nav-menu-admin .active {
+  background-color: rgba(0, 191, 255, 0.2);
+  color: #00bfff;
+  font-weight: bold;
+  border-left: 4px solid #00bfff;
+  padding-left: 16px;
+}
+
+.adminlogout {
+  padding: 12px 20px;
+  background-color: #00bfff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  align-self: center;
+  width: 100%;
+  max-width: 200px;
+}
+
+.adminlogout:hover {
+  background-color: #008ecc;
+}
+
+/* Responsive sidebar behavior for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-menu-admin {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .adminlogout {
+    margin-top: 20px;
+  }
+}
