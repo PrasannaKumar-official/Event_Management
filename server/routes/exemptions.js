@@ -5,17 +5,22 @@ import { auth, adminAuth } from '../middleware/auth.js';
 
 const router = express.Router();
 
-// Get all exemption requests (admin only)
+//Get all exemption requests (admin only)
 router.get('/', adminAuth, async (req, res) => {
   try {
     const exemptions = await Exemption.find()
-      .populate('student', 'username')
+      .populate('student', 'name username rollNumber year department') // ✅ Added 'name'
       .populate('completedCourses', 'name');
+
+    console.log('Fetched Exemptions:', JSON.stringify(exemptions, null, 2)); // ✅ Pretty print with indentation
+
     res.json(exemptions);
   } catch (err) {
+    console.error('Error fetching exemptions:', err); // ✅ Log errors
     res.status(500).json({ message: 'Server error' });
   }
 });
+
 
 // Get student's exemption status
 router.get('/status', auth, async (req, res) => {

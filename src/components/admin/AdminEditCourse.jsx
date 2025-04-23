@@ -52,12 +52,13 @@ function EditCourse() {
         if (key !== 'image' || (key === 'image' && value)) formData.append(key, value);
       });
 
-      await axios.put(`http://localhost:5000/api/courses/${selectedCourse._id}/edit`, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          Authorization: `Bearer ${localStorage.getItem('token')}`,
-        },
-      });
+      await axios.put(`http://localhost:5000/api/courses/update/${selectedCourse._id}`, formData, {
+  headers: {
+    'Content-Type': 'multipart/form-data',
+    Authorization: `Bearer ${localStorage.getItem('token')}`,
+  },
+});
+
 
       setMessage('Course updated successfully');
       setTimeout(() => window.location.reload(), 2000);

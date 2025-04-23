@@ -20,7 +20,8 @@ function AdminDashboard() {
           <Link to="/admin/add-course" className={location.pathname === "/admin/add-course" ? "active" : ""}>Add Course</Link>
           <Link to="/admin/registrations" className={location.pathname === "/admin/registrations" ? "active" : ""}>Course Registrations</Link>
           <Link to="/admin/exemptions" className={location.pathname === "/admin/exemptions" ? "active" : ""}>Exemption Requests</Link>
-          <Link to="/admin/edit" className={location.pathname === "/admin/EditCourse" ? "active" : ""}>Edit Course</Link>
+          <Link to="/admin/edit" className={location.pathname === "/admin/edit" ? "active" : ""}>Edit Course</Link>
+
         </nav>
         <button onClick={handleLogout} className="adminlogout">Logout</button>
       </div>

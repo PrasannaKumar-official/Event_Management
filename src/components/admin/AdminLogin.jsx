@@ -24,39 +24,41 @@ function AdminLogin() {
     }
   };
 
-  return (<>
-  <h2 className='one-Credit-Course-Exemption-System-for-login-admin'>ONE CREDIT COURSE EXEMPTION SYSTEM</h2>
-    <div className="login-container-adminlogin">
-      <h2 className="AdminLogin">Admin Login</h2>
-      {error && <div className="status-message error-adminlogin">{error}</div>}
-      <form onSubmit={handleSubmit}>
-        <div className="form-group-adminlogin">
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-            placeholder="Enter your username"
-          />
+  return (
+    <>
+      <h2 className='page-title-adminlogin'>ONE CREDIT COURSE EXEMPTION SYSTEM</h2>
+      <div className="login-container-adminlogin">
+        <h2 className="AdminLogin">Admin Login</h2>
+        {error && <div className="status-message error-adminlogin">{error}</div>}
+        <form onSubmit={handleSubmit}>
+          <div className="form-group-adminlogin">
+            <label htmlFor="username">Username</label>
+            <input
+              id="username"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group-adminlogin">
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="btnadminlogin">Login</button>
+        </form>
+        <div className="login-link-admin">
+          <Link to="/admin/register" className="login-link">Register here</Link>
+          <Link to="/student/login" className="login-link-admin-forstudent">Student page</Link>
         </div>
-        <div className="form-group-adminlogin">
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            placeholder="Enter your password"
-          />
-        </div>
-        <button type="submit" className="btnadminlogin">Login</button>
-      </form>
-      <div className="login-link-admin">
-        <a href="/admin/register" className="login-link">Register here</a>
-        <Link to="/student/login" className="login-link-admin-forstudent">Student page</Link>
       </div>
-    </div></>
+    </>
   );
 }
 

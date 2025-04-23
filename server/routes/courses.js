@@ -173,20 +173,60 @@ router.post('/:id/register', auth, async (req, res) => {
 });
 
 // ✅ Update course (admin only)
-router.put('/:id/edit', adminAuth, upload.single('image'), async (req, res) => {
+// router.put('/:id/edit', adminAuth, upload.single('image'), async (req, res) => {
+//   try {
+//     const course = await Course.findById(req.params.id);
+//     if (!course) return res.status(404).json({ message: 'Course not found' });
+
+//     const updatedData = { ...req.body };
+//     if (req.file) updatedData.image = req.file.path;
+
+//     await Course.findByIdAndUpdate(req.params.id, updatedData, { new: true });
+//     res.json({ message: 'Course updated successfully' });
+//   } catch (err) {
+//     res.status(500).json({ message: 'Error updating course', error: err.message });
+//   }
+// });
+router.put('/update/:id', upload.single('image'), async (req, res) => {
   try {
-    const course = await Course.findById(req.params.id);
-    if (!course) return res.status(404).json({ message: 'Course not found' });
+    console.log("Updating course with data:", req.body);
 
     const updatedData = { ...req.body };
-    if (req.file) updatedData.image = req.file.path;
 
-    await Course.findByIdAndUpdate(req.params.id, updatedData, { new: true });
-    res.json({ message: 'Course updated successfully' });
-  } catch (err) {
-    res.status(500).json({ message: 'Error updating course', error: err.message });
+    // ❌ Remove fields that shouldn't be updated directly
+    delete updatedData.registeredStudents;
+    delete updatedData.createdAt;
+    delete updatedData.updatedAt;
+    delete updatedData.__v;
+    delete updatedData.isRegistered;
+    delete updatedData.currentCount;
+
+    // ✅ Clean and convert data types if necessary
+    if (updatedData.maxCount) updatedData.maxCount = Number(updatedData.maxCount);
+    if (updatedData.lastRegistrationDate) updatedData.lastRegistrationDate = new Date(updatedData.lastRegistrationDate);
+    if (updatedData.startDate) updatedData.startDate = new Date(updatedData.startDate);
+    if (updatedData.endDate) updatedData.endDate = new Date(updatedData.endDate);
+
+    // ✅ Handle file upload
+    if (req.file) {
+      console.log("Uploaded file:", req.file.filename);
+      updatedData.image = req.file.path;
+    }
+
+    const updatedCourse = await Course.findByIdAndUpdate(req.params.id, updatedData, { new: true });
+
+    if (!updatedCourse) {
+      return res.status(404).json({ message: 'Course not found' });
+    }
+
+    res.status(200).json({ message: 'Course updated successfully', course: updatedCourse });
+  } catch (error) {
+    console.error("🔥 Update course error:", error);
+    res.status(500).json({ message: 'Internal Server Error', error: error.message });
   }
 });
+
+
 
 // ✅ Delete course (admin only)
 router.delete('/:id/delete', adminAuth, async (req, res) => {

@@ -7,11 +7,18 @@ import { Link } from 'react-router-dom';
 function AdminRegister() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [adminKey, setAdminKey] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (adminKey !== '123') {
+      setError('Invalid Admin Key');
+      return;
+    }
+
     try {
       await axios.post('http://localhost:5000/api/auth/admin/register', {
         username,
@@ -24,36 +31,48 @@ function AdminRegister() {
     }
   };
 
-  return (<>
-    <h2 className='one-Credit-Course-Exemption-System-for-register-admin'>ONE CREDIT COURSE EXEMPTION SYSTEM</h2>
-    <div className="login-container-adminregister">
-      <h2 className='AdminRegistration'>Admin Registration</h2>
-      {error && <div className="status-message error-adminregister">{error}</div>}
-      <form onSubmit={handleSubmit}>
-        <div className="form-group-adminregister">
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-            placeholder="Enter your username"
-          />
-        </div>
-        <div className="form-group-adminregister">
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            placeholder="Enter your password"
-          />
-        </div>
-        <button type="submit" className="btnadminregister">Register</button>
-      </form>
-      <Link to="/admin/login" className="login-link-admin-register">Login here</Link>
-    </div></>
+  return (
+    <>
+      <h2 className='page-title-adminregister'>ONE CREDIT COURSE EXEMPTION SYSTEM</h2>
+      <div className="login-container-adminregister">
+        <h2 className='AdminRegistration'>Admin Registration</h2>
+        {error && <div className="status-message error-adminregister">{error}</div>}
+        <form onSubmit={handleSubmit}>
+          <div className="form-group-adminregister">
+            <label htmlFor="username">Username</label>
+            <input
+              id="username"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group-adminregister">
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group-adminregister">
+            <label htmlFor="adminKey">Admin Key</label>
+            <input
+              id="adminKey"
+              type="password"
+              value={adminKey}
+              onChange={(e) => setAdminKey(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="btnadminregister">Register</button>
+        </form>
+        <Link to="/admin/login" className="login-link-admin-register">Login here</Link>
+      </div>
+    </>
   );
 }
 

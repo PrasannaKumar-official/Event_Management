@@ -1,31 +1,35 @@
-.one-Credit-Course-Exemption-System-for-register-student{
-    position:absolute;
-   top:40px;
-   left:535px;
+.one-Credit-Course-Exemption-System-for-register-student {
+    position: absolute;
+    top: 40px;
+    left: 450px;
+    color: #2196f3; /* Blue text for the title */
+    font-size: 2rem;
 }
 
 .login-container-studentregister {
     font-family: 'Arial', sans-serif;
-    background-color: #2f2f2f;
+    background-color: #121212; /* Black background */
     color: #fff;
     padding: 30px;
-    margin: 0 auto; /* Center the container */
-    width: 400px; /* Set a fixed width to match the login form */
+    margin: 0 auto; 
+    width: 400px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     height: 400px;
-    margin-left:550px;
+    margin-left: 550px;
+    margin-top:150px;
 }
+
 
 .StudentRegistration {
     text-align: center;
-    color:  #2196f3; /* Changed color to green */
+    color: #2196f3; /* Blue color for the title */
     font-size: 1.8rem;
     margin-bottom: 20px;
 }
 
 .status-message.error-studentregister {
-    background-color: #f44336;
+    background-color: #f44336; /* Red background for error */
     color: white;
     padding: 10px;
     margin-bottom: 20px;
@@ -41,24 +45,24 @@
 .form-group-studentregister label {
     font-size: 1rem;
     margin-bottom: 8px;
-    color: #e0e0e0;
+    color: #b0b0b0; /* Lighter gray for the labels */
 }
 
 .form-group-studentregister input {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #444; /* Darker border for input */
     border-radius: 5px;
-    background-color: #333;
+    background-color: #1c1c1c; /* Darker background for input fields */
     color: white;
     box-sizing: border-box;
 }
 
 .form-group-studentregister input:focus {
     outline: none;
-    border-color:  #2196f3; /* Changed border color to green */
-    box-shadow: 0 0 5px  #2196f3; /* Changed focus color to green */
+    border-color: #2196f3; /* Blue border on focus */
+    box-shadow: 0 0 5px  #2196f3; /* Blue focus shadow */
 }
 
 .btnstudentregister {
@@ -66,7 +70,7 @@
     padding: 12px;
     font-size: 1.1rem;
     color: white;
-    background-color:  #2196f3; /* Changed button color to green */
+    background-color: #2196f3; /* Blue button background */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -74,25 +78,21 @@
 }
 
 .btnstudentregister:hover {
-    background-color: #2196f3; /* Darker green on hover */
+    background-color: #1976d2; /* Darker blue on hover */
 }
 
 .btnstudentregister:active {
-    background-color: #2196f3; /* Even darker green on active */
+    background-color: #1565c0; /* Even darker blue on active */
 }
 
-.login-link-student {
-    margin-left: 220px;
+.login-link-student-register {
+    margin-left: 320px;
     position: relative;
-    top: 10px;
+    top: 20px;
+    color: #2196f3; /* Blue color for the link */
+    text-decoration: none;
 }
 
-.login-link-student-register{
-    margin-left:320px;
-    position:relative;
-    top:20px;
-    color: #2196f3;
-}
-.login-link-student-register:hover{
-    color:white;
+.login-link-student-register:hover {
+    color: white; /* White color on hover for the link */
 }
