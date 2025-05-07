@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://github.com/DINESHKARTHIKN/DINESHKARTHIKN/blob/main/BANNER.png?raw=true" alt="banner" width="100%" height="300px" />
-</p>
+
 
 <h1 align="center">📚 Course Exemption Web Application</h1>
 <h3 align="center">A Full Stack MERN App for One-Credit Course Management and Exemption</h3>
@@ -46,19 +44,16 @@ The **Course Exemption Web** application is a full-stack project built using the
 ## 🛠 Tech Stack
 
 ### 🖥 Frontend
-- React.js with Hooks
-- React Router DOM
-- Axios for API calls
+- React.js 
 - Custom CSS
 
 ### 🗃 Backend
 - Node.js
 - Express.js
-- MongoDB with Mongoose
-- Multer for image handling
-- JWT for authentication
 
----
 
-## 📂 Folder Structure
+### 🗃 Database 
+- MongoDB
+  
+
 
