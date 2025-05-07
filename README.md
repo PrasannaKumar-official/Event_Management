@@ -18,7 +18,6 @@
 - ✅ **Admin Actions** – Approve/reject exemption requests
 - 📊 **Dashboard Analytics** – Admin overview of activity, requests, and stats
 - 🖼 **Course Image Upload** – Powered by **Multer**
-- 🧩 **Modular RESTful API** – Clean and scalable backend
 - ⚠️ **Form Validation** – Frontend and backend error handling
 
 ---
