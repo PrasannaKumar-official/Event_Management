@@ -25,9 +25,9 @@ function StudentRegister() {
   };
 
   return (<>
-  <h2 className='one-Credit-Course-Exemption-System-for-register-student'>ONE CREDIT COURSE EXEMPTION SYSTEM</h2>
+  <h2 className='one-Credit-Course-Exemption-System-for-register-student'>EVENT MANAGEMENT SYSTEM</h2>
     <div className="login-container-studentregister">
-      <h2 className="StudentRegistration">Student Registration</h2>
+      <h2 className="StudentRegistration">User Registration</h2>
       {error && <div className="status-message error-studentregister">{error}</div>}
       <form onSubmit={handleSubmit}>
         <div className="form-group-studentregister">

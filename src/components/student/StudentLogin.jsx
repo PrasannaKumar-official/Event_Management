@@ -23,7 +23,7 @@ function StudentLogin() {
     if (response.data.token) {
       localStorage.setItem('token', response.data.token);
       console.log('✅ Token stored:', localStorage.getItem('token'));
-      navigate('/student/courses');
+      navigate('/student/exemption');
     } else {
       console.error('❌ Token missing in response:', response.data);
     }
@@ -36,9 +36,9 @@ function StudentLogin() {
 
   return (
     <>
-    <h2 className='one-Credit-Course-Exemption-System-for-login-student'>ONE CREDIT COURSE EXEMPTION SYSTEM</h2>
+    <h2 className='one-Credit-Course-Exemption-System-for-login-student'>EVENT MANAGEMENT SYSTEM</h2>
     <div className="login-container-studentlogin">
-      <h2 className="StudentLogin">Student Login</h2>
+      <h2 className="StudentLogin">User Login</h2>
       {error && <div className="status-message error-studentlogin">{error}</div>}
       <form onSubmit={handleSubmit}>
         <div className="form-group-studentlogin">

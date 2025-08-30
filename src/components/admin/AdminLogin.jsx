@@ -26,7 +26,7 @@ function AdminLogin() {
 
   return (
     <>
-      <h2 className='page-title-adminlogin'>ONE CREDIT COURSE EXEMPTION SYSTEM</h2>
+      <h2 className='page-title-adminlogin'>EVENT MANAGEMENT SYSTEM</h2>
       <div className="login-container-adminlogin">
         <h2 className="AdminLogin">Admin Login</h2>
         {error && <div className="status-message error-adminlogin">{error}</div>}

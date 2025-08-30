@@ -33,7 +33,7 @@ function AdminRegister() {
 
   return (
     <>
-      <h2 className='page-title-adminregister'>ONE CREDIT COURSE EXEMPTION SYSTEM</h2>
+      <h2 className='page-title-adminregister'>EVENT MANAGEMENT SYSTEM</h2>
       <div className="login-container-adminregister">
         <h2 className='AdminRegistration'>Admin Registration</h2>
         {error && <div className="status-message error-adminregister">{error}</div>}

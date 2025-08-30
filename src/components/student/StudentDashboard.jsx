@@ -14,8 +14,7 @@
         <div className="dashboard-header">
           <h1 className='student-dashboard'>Student Dash<span className='boards'>board</span></h1>
           <nav className="nav-menu">
-            <Link to="/student/courses" className="nav-link1">Available Courses</Link>
-            <Link to="/student/exemption" className="nav-link2">Apply for Exemption</Link>
+            <Link to="/student/exemption" className="nav-link2">Event Registration</Link>
             <button onClick={handleLogout} className="btnstudentlogout">Logout</button>
           </nav>
         </div>

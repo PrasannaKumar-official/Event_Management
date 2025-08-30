@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
 import courseRoutes from './routes/courses.js';
 import exemptionRoutes from './routes/exemptions.js';
+import eventRoutes from './routes/events.js';
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use('/uploads', express.static('uploads'));
 app.use('/api/auth', authRoutes);
 app.use('/api/courses', courseRoutes);
 app.use('/api/exemptions', exemptionRoutes);
+app.use('/api/events', eventRoutes);
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)
@@ -29,4 +31,6 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
 
